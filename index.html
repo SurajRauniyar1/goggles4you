@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goggles4you</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Bootstrap Bundle with Popper (includes Bootstrap JS and Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div>
+
+            <h1>Goggles4you</h1>
+            <h2>Welcome to the Best Eyewear Store</h2>
+            <nav class="d-flex justify-content-between align-items-center">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#specs">Specs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#goggles">Goggles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#glasses">Glasses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                
+                <button id="theme-toggle" class="btn btn-light mt-3">
+                    <i class="fas fa-sun"></i> <!-- Light mode icon -->
+                </button>
+                
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Carousel Section -->
+    <div id="carouselExampleDark" class="carousel custom-carousel carousel-dark slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="photos/carousel/carousel1.jpg" class="d-block w-100" alt="First slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="photos/carousel/carousel2.png" class="d-block w-100" alt="Second slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="photos/carousel/carousel3.png" class="d-block w-100" alt="Third slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+    <!-- Specs Section -->
+    <section id="specs" class="category">
+        <h2 class="display-4 mb-4">Specs</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="photos/Specs/1.jpg" alt="Specs 1">
+                <h3 class="h4">Classic Specs</h3>
+                <button onclick="addToCart('Classic Specs')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="photos/Specs/2.jpg" alt="Specs 2">
+                <h3 class="h4">Modern Specs</h3>
+                <button onclick="addToCart('Modern Specs')">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Goggles Section -->
+    <section id="goggles" class="category">
+        <h2 class="display-4 mb-4">Goggles</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="photos/goggles/1.jpg" alt="Goggles 1">
+                <h3 class="h4">Sport Goggles</h3>
+                <p>Price: $80</p>
+                <button onclick="addToCart('Sport Goggles')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="photos/goggles/2.webp" alt="Goggles 2">
+                <h3 class="h4">Swim Goggles</h3>
+                <p>Price: $70</p>
+                <button onclick="addToCart('Swim Goggles')">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Glasses Section -->
+    <section id="glasses" class="category">
+        <h2 class="display-4 mb-4">Glasses</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="photos/glass/1.jpg" alt="Glasses 1">
+                <h3 class="h4">Reading Glasses</h3>
+                <p>Price: $50</p>
+                <button onclick="addToCart('Reading Glasses')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="photos/glass/2.jpg" alt="Glasses 2">
+                <h3 class="h4">Sun Glasses</h3>
+                <p>Price: $60</p>
+                <button onclick="addToCart('Sun Glasses')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="photos/glass/3.jpeg" alt="Glasses 3">
+                <h3 class="h4">Sun Glasses</h3>
+                <p>Price: $60</p>
+                <button onclick="addToCart('Sun Glasses')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="photos/glass/4.jpg" alt="Glasses 4">
+                <h3 class="h4">Sun Glasses</h3>
+                <p>Price: $60</p>
+                <button onclick="addToCart('Sun Glasses')">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact text-center">
+        <h2 class="display-4 mb-4">Contact Us</h2>
+        <p>Email: tex.reshma@gmail.com</p>
+        <p>Phone: 8948632169</p>
+    </section>
+    
+    <!-- Footer Section -->
+    <footer class="text-center mt-4">
+        <p>&copy; 2024 Eyewear Store. All rights reserved.</p>
+    </footer>
+    
+    <!-- Additional Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
