@@ -1,0 +1,277 @@
+/* General body styles */
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme changes */
+}
+
+/* Header styles */
+header {
+    background-color: #555; /* Grey background */
+    color: white; /* Light text color for contrast */
+    padding: 10px 0; /* More padding for a balanced look */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Ensure nav items and button are spaced out */
+    align-items: center;
+}
+
+/* Navbar styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px; /* Increased margin for spacing */
+}
+
+nav ul li a {
+    color: #f8f9fa; /* Light color for better readability in dark theme */
+    text-decoration: none;
+    font-size: 18px; /* Larger font size for better readability */
+    padding: 10px 15px; /* Padding around the links for a button-like feel */
+    border-radius: 5px; /* Rounded corners for links */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effects */
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Darker background on hover */
+    color: #f8f9fa; /* Light text color on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+/* Theme toggle button */
+#theme-toggle {
+    background: none; /* Remove default background */
+    border: none; /* Remove default border */
+    color: #ffffff; /* Ensure icon color is white */
+    font-size: 24px; /* Adjust icon size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: color 0.3s; /* Smooth color transition */
+}
+/* Light theme styles */
+.light-theme {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.light-theme header {
+    background-color: #6c757d; /* Grey background */
+    color: #f8f9fa; /* Light text color */
+}
+
+.light-theme nav ul li a {
+    color: #333;
+}
+
+.light-theme nav ul li a:hover {
+    background-color: #ddd; /* Light hover background */
+    color: #000; /* Dark text color on hover */
+}
+
+.light-theme button {
+    background-color: #333;
+    color: #fff;
+}
+
+.light-theme footer {
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Dark theme styles */
+.dark-theme {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+.dark-theme header {
+    background-color: #555; /* Grey background */
+    color: #f0f0f0;
+}
+
+.dark-theme nav ul li a {
+    color: #f0f0f0; /* Light color for better readability in dark theme */
+}
+
+.dark-theme nav ul li a:hover {
+    background-color: #777; /* Darker background on hover */
+    color: #f0f0f0; /* Light text color on hover */
+}
+.dark-theme .product-card {
+    background-color: #444; /* Darker background for product cards */
+    color: #f0f0f0; /* Light text color for product details */
+}
+
+.dark-theme button {
+    background-color: #555;
+    color: #f0f0f0;
+}
+
+.dark-theme footer {
+    background-color: #222;
+    color: #f0f0f0;
+}
+
+/* Carousel styles */
+.custom-carousel {
+    width: 100vw;  /* Full width of the viewport */
+    height: 60vh;  /* Adjust height as needed, proportional to the width */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative; /* Ensure proper positioning */
+}
+
+.custom-carousel .carousel-inner {
+    height: 100%;
+}
+
+.custom-carousel .carousel-item {
+    height: 100%;
+}
+
+.custom-carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+    object-position: center; /* Center the image within the container */
+    display: block; /* Remove any unwanted gaps or spacing */
+}
+
+/* Hero section */
+.hero {
+    background-color: #343a40;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.25rem;
+}
+
+/* Category section */
+.category {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.category h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Product grid styles */
+.product-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 8px;
+    border-bottom: 2px solid #ddd;
+}
+
+.product-card h3 {
+    font-size: 1.25rem;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.product-card p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Button styles */
+button {
+    background-color: #212529;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #495057;
+}
+
+/* Footer styles */
+footer {
+    background-color: #212529;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .product-grid {
+        flex-direction: column;
+    }
+
+    .product-card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-card {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .hero {
+        padding: 40px 0;
+    }
+
+    .custom-carousel {
+        height: 50vh; /* Reduce height on very small screens */
+    }
+}
